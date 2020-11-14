@@ -67,13 +67,23 @@ In den Einstellungen konfigurieren Sie grundsätzliche Einstellungen Ihrer Seats
 **Domains:** Gibt die Domains an, innerhalb deren Namensraum Ihre Benutzer sich befinden können. Nach dem Hinzufügen einer Domain ist die Bestätigung der Inhaberschaft zur Aktivierung erforderlich. Dies erfordert Zugriff auf den DNS-Server der jeweiligen Domain, da ein TXT-Record angelegt werden muss.
 
 ### Abonnement
-Dokumentation folgt in Kürze.
+Hier sehen Sie den Umfang Ihres abgeschlossenen Seatsurfing-Abonnements. Wenn Sie bislang die kostenfreie Version nutzen, können Sie ein neues Abonnement abschließen. Wenn Sie bereits ein Paket gebucht haben, können Sie Ihr Abonnement verwalten und dessen Umfang verändern oder Ihre Subscription beenden.
+
+Die Verwaltung Ihres Abonnements erfolgt über unseren Partner FastSpring bzw. das Unternehmen Bright Market, LLC. Zum Verwalten Ihrer Subscription werden daher Ihre Unternehmens- und Ansprechpartner-Stammdaten an FastSpring übertragen.
+
+Sie können Ihr Abonnement monatlich verändern und kündigen. Wenn Sie Ihr Abonnement kündigen oder die Anzahl der lizensierten Benutzer unter die aktuell vorhandene Anzahl an Benutzern reduzieren, bleiben die bestehenden Benutzer erhalten. Jedoch können sich Benutzer, die keine Administratoren sind, dann nicht mehr anmelden, bis Sie die lizensierte Maximalanzahl wieder erreicht oder unterschritten haben.
 
 ### Auth Providers
-Dokumentation folgt in Kürze.
+Authentifizierungs-Provider sind Dienste, die bei der Anmeldung an Seatsurfing die Authentifizierung über standardisierte Protokolle übernehmen. Seatsurfing unterstützt aktuell OAuth 2 und OpenID Connect (OIDC). Hierdurch können Sie Benutzeranmeldungen gegen Ihr unternehmensinternes Benutzerverzeichnis validieren. Die Kennwörter werden hierbei innerhalb des jeweiligen Diensts in Ihrer Infrastruktur eingegeben und nicht an Seatsurfing übertragen.
+
+Um einen Auth Provider hinzuzufügen, klicken Sie auf den entsprechenden Button. Je nach Auth Provider Typ werden verschiedene technische Informationen benötigt. Wenden Sie sich gegebenenfalls an den technischen Administrator Ihres Authentifizierungsdiensts, um diese Informationen zu erhalten.
+
+Auth Provider können zusätzlich zur Kennwort-Authentifizierung innerhalb von Seatsurfing eingesetzt werden. Es wird bei der Anmeldung zunächst geprüft, ob der angegebene Benutzer im Seatsurfing-Benutzerverzeichnis existiert und die Kennwort-Anmeldung aktiviert ist. Ist dies der Fall, wird der Benutzer von Seatsurfing zur Eingabe eines Kennworts aufgefordert. Ansonsten ist eine Anmeldung über einen der von Ihnen hinterlegen Auth Provider möglich.
 
 ### Kritische Funktionen
-Dokumentation folgt in Kürze.
+In diesem Abschnitt können Sie Ihre Seatsurfing-Organisation löschen. Die Löschung erfolgt nach einer Sicherheitsabfrage und ist unwiderruflich. Alle Ihre Daten auf den Seatsurfing-Servern werden dabei gelöscht und können nicht wiederhergestellt werden. Nutzen Sie diese Funktion also nur, wenn Sie sich absolut sicher sind.
+
+Bitte melden Sie sich bei uns, wenn Sie Fragen zur Nutzung oder Anforderungen an den Funktionsumfang haben.
 
 ## Suche
 Die Suchfunktion am oberen Bereich der Administrations-Oberfläche verwenden SIe durch Eingeben eines Suchbegriffs und Betätigen der Enter-Taste.
