@@ -1,7 +1,9 @@
 site_name: Seatsurfing
 docs_dir: src
 theme:
-    name: readthedocs
+    name: material
+    logo: img/icon.svg
+    language: de
 nav:
     - 'index.md'
     - 'features.md'
@@ -9,3 +11,4 @@ nav:
     - 'admin-ui.md'
     - 'app.md'
     - 'permissions.md'
+    - 'support.md'

@@ -18,7 +18,7 @@ In der Administrations-Oberfläche können Sie Ihre Raumpläne, Benutzer und Ein
 ### 3. Mobile App herunterladen
 Die mobilen Apps für iOS und Android finden Sie kostenlos im App Store bzw. bei Google Play:
 
-* [App Store](https://seatsurfing.de/#)
+* [App Store](https://apps.apple.com/de/app/seatsurfing/id1536275675)
 * [Google Play](https://play.google.com/store/apps/details?id=de.seatsurfing.app)
 
 ## On-Premises

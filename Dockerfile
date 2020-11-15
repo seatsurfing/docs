@@ -1,6 +1,6 @@
 FROM python:3-alpine AS builder
 RUN apk add --no-cache --update gcc musl-dev
-RUN pip3 install mkdocs
+RUN pip3 install mkdocs mkdocs-material
 ADD . /docs/
 WORKDIR /docs
 RUN mkdocs build

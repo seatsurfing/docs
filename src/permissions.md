@@ -1,5 +1,10 @@
 # Berechtigungen
 
+## REST API
+Seatsurfing nutzt eine Reihe von RESTful APIs, um aus dem Backend heraus Funktionen für die mobile App und die Administrations-Oberfläche bereitzustellen. Jede API unterliegt einer Berechtigungsprüfung. Hierbei wird zunächst die jeweils angegebene Rolle des aufrufenden Benutzers überprüft. Im zweiten Schritt wird für Organisations-spezifische Funktionen die Angehörigkeit zu einer bestimmten Seatsurfing-Organisation geprüft.
+
+Die REST API verwendet die etablierten HTTP Status Codes, um über das Ergebnis und eventuelle Fehler zu informieren.
+
 ## Rollen
 * Anonym: Jeder Benutzer, kein Login erforderlich
 * User: Eingeloggter Benutzer einer Organisation ohne zusätzliche Berechtigungen
