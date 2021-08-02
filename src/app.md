@@ -3,7 +3,7 @@
 ## Einführung
 Die mobile App von Seatsurfing für die Betriebssysteme Google Android und Apple iOS finden Sie kostenfrei in den jeweiligen offiziellen App Stores:
 
-* [App Store](https://apps.apple.com/de/app/seatsurfing/id1536275675)
+* [App Store](https://apps.apple.com/app/seatsurfing/id1579071273)
 * [Google Play](https://play.google.com/store/apps/details?id=de.seatsurfing.app)
 
 Mit der App können Mitarbeiter Ihres Unternehmens ihre Sitzplätze selbständig buchen sowie bestehende Buchungen verwalten, inklusive der Stornierung zukünftiger eigener Buchungen.

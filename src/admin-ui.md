@@ -2,7 +2,7 @@
 ## Einführung
 Die Administrations-Oberfläche erreichen Sie mit einem aktuellen Web-Browser unter folgender Adresse:
 
-[https://app.seatsurfing.de/admin/](https://app.seatsurfing.de/admin/)
+[http://localhost:8080/admin/](http://localhost:8080/admin/)
 
 Zum Login muss Ihr Benutzer in Ihrer Organisation mit der Administrations-Berechtigung (Org Admin) ausgestattet sein.
 

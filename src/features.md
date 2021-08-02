@@ -28,4 +28,4 @@ Der wesentliche Funktionsumfang von Seatsurfing umfasst:
 * Einsehen von Buchungs- und Auslastungs-Statistiken
 
 ## Hosting
-Seatsurfing kann wahlweise als Cloud-Service (Software as a Service / SaaS) oder zukünftig auf Ihren Unternehmens-Servern on-premises genutzt werden.
+Seatsurfing betreiben Sie auf Ihren Unternehmens-Servern on-premises. Die Einrichtung ist einfach und binnen weniger Minuten machbar.
