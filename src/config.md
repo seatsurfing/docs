@@ -28,7 +28,13 @@ Hier finden Sie eine Übersicht über alle verfügbaren Umgebungsvariablen.
 | STATIC_BOOKING_UI_PATH | string | /app/bookingui | Path to compiled Booking UI files |
 | POSTGRES_URL | string | postgres://postgres:root @ localhost/seatsurfing?sslmode=disable | PostgreSQL Connection |
 | JWT_SIGNING_KEY | string | random string | JWT Signing Key |
-| SMTP_HOST | string | 127.0.0.1:25 | SMTP server address and port (authentication is not supported at this time) |
+| SMTP_HOST | string | 127.0.0.1 | SMTP server address |
+| SMTP_PORT | int | 25 | SMTP server port |
+| SMTP_START_TLS | bool | 0 | Use SMTP STARTTLS extension, set to 1 to enable |
+| SMTP_INSECURE_SKIP_VERIFY | bool | 0 | Disable SMTP TLS certificate validation |
+| SMTP_AUTH | bool | 0 | SMTP authentication, set to 1 to enable |
+| SMTP_AUTH_USER | string |  | SMTP auth username |
+| SMTP_AUTH_PASS | string |  | SMTP auth password |
 | SMTP_SENDER_ADDRESS | string | no-reply@seatsurfing.local | SMTP sender address |
 | MOCK_SENDMAIL | bool | 0 | SMTP mocking, set to 1 to enable |
 | PRINT_CONFIG | bool | 0 | Print configuration on startup, set to 1 to enable |
@@ -42,3 +48,4 @@ Hier finden Sie eine Übersicht über alle verfügbaren Umgebungsvariablen.
 | ORG_SIGNUP_DOMAIN | string | .on.seatsurfing.local | Signup domain suffix |
 | ORG_SIGNUP_ADMIN | string | admin | Admin username for new signups |
 | ORG_SIGNUP_MAX_USERS | int | 50 | Maximum number of users for new organisations |
+| ORG_SIGNUP_DELETE | bool | 0 | Allow admins to delete their own organisation |
