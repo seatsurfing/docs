@@ -3,7 +3,7 @@ docs_dir: src
 theme:
     name: material
     logo: img/icon.svg
-    language: de
+    language: en
 nav:
     - 'index.md'
     - 'features.md'
@@ -13,5 +13,5 @@ nav:
     - 'app.md'
     - 'booking-ui.md'
     - 'confluence.md'
-    - 'permissions.md'
+    - 'rest-api.md'
     - 'support.md'

@@ -1,29 +1,29 @@
 # Administration
-## Einführung
-Die Administrations-Oberfläche erreichen Sie mit einem aktuellen Web-Browser unter folgender Adresse:
+
+You can access the adminisatration web interface using a modern web browser by visiting your Seatsurfing's instance backend:
 
 [http://localhost:8080/admin/](http://localhost:8080/admin/)
 
-Zum Login muss Ihr Benutzer in Ihrer Organisation mit der Administrations-Berechtigung (Org Admin) ausgestattet sein.
+To log in to the administrator interface, your user must be equipped with org admin permissions.
 
-Nach dem Login sehen Sie die Web-Oberfläche mit folgendem Aufbau:
+After logging in, you'll see a web interface like this:
 
 ![Admin UI Screenshot](img/admin-ui.png)
 
-Auf der linken Seite navigieren Sie zwischen den verschiedenen Bereichen der Administration.
+At the left, you can navigate to the various areas of the administrator interface.
 
-Am Kopf der Oberfläche können Sie mit der Suchfunktion schnell gewünschte Elemente finden (bspw. Benutzer, Bereiche, Plätze). Daneben finden Sie den Button zum Abmelden.
+At the head, you can quickly search for objects (such as users, locations, spaces). Right beside the search bar, you can log out.
 
-Im größten Teil der Fläche wird die jeweilige Funktion angezeigt, die Sie ausgewählt haben. Nach dem Login sehen Sie als Organisations-Admin immer zuerst die aktuellen Statistiken in einem Dashboard.
+The main area views the functionality you've selected. Right after logging in, the main area shows current statistics in a dashboard.
 
 ## Dashboard
-Im Dashboard sehen Sie die aktuellen Statistiken Ihrer Seatsurfing-Organisation. Die Zahlen sollen Ihnen einerseits dabei helfen, die Nutzung und Akzeptanz von Seatsurfing durch Ihre Mitarbeiter einschätzen zu können. Andererseits errechnen wir in Echtzeit Ihre Auslastungsquote, sodass Sie stets Angebot und Nachfrage zu Ihrem Platzangebot im Blick behalten können.
+The dashboard shows current statistics for your Seatsurfing organisation. The statistics and numbers are intended to support you in review usage and user acceptance. Furthermore, Seatsurfing calculates space utilization in real time. This way you can always keep an eye on supply and demand.
 
-Im oberen Bereich sehen Sie Zahlen zur Anzahl der Benutzer, Bereiche und Plätze sowie die Gesamtanzahl der Buchungen, die Ihre Organisation mit Seatsurfing erfahren hat.
+The top of the dashboard shows information regarding the number of users, locations and spaces as well as the total mumber of bookings.
 
-Darunter sehen Sie die absoluten Zahlen der Buchungen von heute, gestern, dieser Woche und vergangener Woche.
+Below that, you can see current booking numbers of today, yesterday, the current week and the previous week.
 
-Anhand der danach folgenden Balkendiagramme können Sie die Auslastung Ihrer Plätze ablesen.
+The bar charts visualize the utilization of your spaces.
 
 ## Bereiche
 Als Bereich bezeichnen wir in Seatsurfing alles, was einen eigenen Grundriss hat. Das kann beispielsweise ein einzelnes Stockwerk eines Gebäudes sein. In diesem Bereich haben Sie die Möglichkeit, Plätze zu verwalten. Ein Platz ist hierbei eine eigenständig von einem Nutzer buchbarere Fläche – je nach Konzept also ein einzelner Sitzplatz, ein Schreibtisch oder ein ganzer Raum.

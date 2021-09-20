@@ -1,31 +1,34 @@
-# Funktionen
+# Features
 
-## Einführung
-Seatsurfing ist eine Lösung für Unternehmen. Sie ermöglicht es Ihren Mitarbeitern, eigenverantwortlich und flexibel Sitzplätze (und andere Räumlichkeiten) nach Bedarf zu buchen. Damit werden Unternehmen dem zunehmenden Ruf nach flexibler Arbeitzeitgestaltung und Flexible Seating gerecht.
+## Introduction
+Seatsurfing is a solution for organisations and enterprises. It allows your employees to book spaces and seats on their own. Seatsurfing enables organisations to drive change towards flexible working times and free seating.
 
-Seatsurfing nutzt ein abstraktes Modell zur Abbildung der buchbaren Lokationen. Sie können Seatsurfing daher für verschiedene Zwecke verwenden:
+Seatsurfing uses an abstract model for bookable locations. You can therefore use Seatsurfing for multiple purposes:
 
-* Buchung von einzelnen Sitzplätzen in Co-Working Lokationen (Flexible Seating)
-* Buchung von ganzen Räumen (bspw. Besprechungsräume)
-* Buchung von Parkplätzen
+* Booking single seats in co-working facilities (free seating, flexible seating)
+* Booking entire rooms (i.e. conference rooms)
+* Booking parking lots
+* ...and more...
 
-Die Anwendung enthält derzeit *kein* Abrechnungsmodell gegenüber den Nutzern der Anwendung. Es ist dafür gedacht, den Mitarbeitern von Unternehmen kostenfrei die Wahl ihrer Sitzplätze zu ermöglichen. Für kommerzielle Modelle ist die Anwendung bislang nicht ausgelegt.
+The application does currently *not* contain an accounting model. This means that you can't bill commercially rentable spaces (such as desks in a coworking space). Seatsurfing is meant for organisations providing free seats to their employees.
 
-## Bestandteile der Anwendung
-Seatsurfing besteht im Wesentlichen aus:
+## Components
+Seatsurfing consists of:
 
-* Einer mobilen App für iOS und Android, mit dem Mitarbeiter eines Unternehmens flexibel Plätze buchen können
-* Einer Web-Administrations-Oberfläche für die Verwalter bzw. Administratoren der Plätze
+* A server backend providing a REST API
+* A web-based administrator interface for ones managing the spaces and users (bundled with the server backend)
+* A mobile app for iOS and Android which can be used by an organisation's employees to book seats
+* A web app which can be used instead of the mobile app (also available as a Confluence App, bundled with the server backend)
 
-## Funktionsumfang
-Der wesentliche Funktionsumfang von Seatsurfing umfasst:
+## Features
+The most important features of Seatsurfing are:
 
-* Sitzplatz-Buchung schnell & flexibel per mobiler App
-* Login der Anwender wahlweise per Kennwort oder mittels OAuth 2 bzw. OpenID Connect (OIDC)
-* Hochladen von Raumplänen in den Formaten JPEG, PNG oder GIF
-* Platzierung von Plätzen per Drag & Drop
-* Konfigurieren von Buchungs-Limits (u.a. max. Buchungs-Vorlauf, max. Anzahl Buchungen)
-* Einsehen von Buchungs- und Auslastungs-Statistiken
+* Booking seats quickly and flexibly using a mobile app
+* Logging in via password or OAuth2
+* Uploading room plans as JPEG, PNG or GIF
+* Placing spaces/seats via drag & drop
+* Configurable booking settings (i.e. max. booking duration, notice and count)
+* Viewing booking and utilization statistics
 
 ## Hosting
-Seatsurfing betreiben Sie auf Ihren Unternehmens-Servern on-premises. Die Einrichtung ist einfach und binnen weniger Minuten machbar.
+Seatsurfing is provided as a Docker image for hosting on-premises. It has been tested using ```docker run```, Docker Compose and Kubernetes.

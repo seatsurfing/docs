@@ -1,8 +1,8 @@
-# Konfiguration
+# Configuration
 
-Übergreifende Einstellungen des Seatsurfing-Backends lassen sich mittels Umgebuzngsvariablen anpassen. Diese setzen Sie als Environment Variable bei der Ausführung des Docker Containers.
+While you can configure organisation-specific settings in the administrator web interface, global settings are set using environment variables. Set these environment variables when running the Seatsurfing backend Docker container.
 
-Bei Verwendung von Docker Compose:
+## Example: Using Docker Compose
 ```
 environment:
   POSTGRES_URL: 'postgres://seatsurfing:DB_PASSWORD@db/seatsurfing?sslmode=disable'
@@ -10,12 +10,12 @@ environment:
   ...
 ```
 
-Bei der Verwendung von ```docker run```:
+## Example: Using ```docker run```
 ```
 docker run -e "INIT_ORG_DOMAIN=ihre-domain.de" -e "POSTGRES_URL=..." seatsurfing/backend
 ```
 
-Hier finden Sie eine Übersicht über alle verfügbaren Umgebungsvariablen.
+## List of environment variables
 
 | Environment Variable | Type | Default | Description |
 | --- | --- | --- | --- |

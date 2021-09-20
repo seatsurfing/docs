@@ -1,19 +1,34 @@
-# Berechtigungen
+# Rest API
 
-## REST API
-Seatsurfing nutzt eine Reihe von RESTful APIs, um aus dem Backend heraus Funktionen für die mobile App und die Administrations-Oberfläche bereitzustellen. Jede API unterliegt einer Berechtigungsprüfung. Hierbei wird zunächst die jeweils angegebene Rolle des aufrufenden Benutzers überprüft. Im zweiten Schritt wird für Organisations-spezifische Funktionen die Angehörigkeit zu einer bestimmten Seatsurfing-Organisation geprüft.
+Seatsurfing provides and uses a couple of REST APIs. The REST APIs are used by the mobile and web app as well as the administrator web interface.
 
-Die REST API verwendet die etablierten HTTP Status Codes, um über das Ergebnis und eventuelle Fehler zu informieren.
+## Authorization checks
+Each API function is protected by authorization checks:
 
-## Rollen
-* Anonym: Jeder Benutzer, kein Login erforderlich
-* User: Eingeloggter Benutzer einer Organisation ohne zusätzliche Berechtigungen
-* Org Admin: Administrator einer Organisation
-* Super Admin: Globaler Administrator, Zugriff auf alle Organsiationen und Funktionen
+* First check: Role of the user (anonymous, user, org admin, super admin)
+* Second check: Organisation membership
 
-## Endpunkte
+## Status Codes
+Seatsurfing's REST API uses the well known HTTP status codes to inform the caller about the result and eventual errors:
 
-### Authentifizierung
+* 201 Created: Object created (includes HTTP response header ```X-Object-ID```)
+* 204 No Content: Object updated or no response content
+* 400 Bad Request: Malformed request or incomplete JSON
+* 401 Unauthorized: JWT in HTTP request header ```Authorization``` missing, expired or invalid
+* 403 Forbidden: Authorized, by user has no access to requested resource
+* 404 Not found: Object not found
+* 409 Conflict: Conflicting request
+* 500 Internal Server Error
+
+## Roles
+* Anonymous: Every user allowed, no authorization required
+* User: Authorized user who is a member of an organisation
+* Org Admin: An organisation's administrator
+* Super Admin: Global administrator with access to all organisations and all functions
+
+## Endpoints
+
+### Authentication
 | Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Password Login | /auth/login | POST | X | | | |
@@ -22,7 +37,7 @@ Die REST API verwendet die etablierten HTTP Status Codes, um über das Ergebnis 
 | OAuth Callback (server to server) | /auth/{id}/callback | GET | X | | | |
 | Retrieve JWT from frontend / app after OAuth Login | /auth/verify/{id} | GET | X | | | |
 
-### Buchungen
+### Bookings
 | Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one own booking | /booking/{id} | GET | | X | | |
@@ -32,7 +47,7 @@ Die REST API verwendet die etablierten HTTP Status Codes, um über das Ergebnis 
 | Get user's own upcoming bookings | /booking/ | GET | | X | | |
 | Get filtered org bookings | /booking/filter/ | POST | | | X | |
 
-### Bereiche
+### Locations
 | Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one location | /location/{id} | GET | | X | | |
@@ -43,7 +58,7 @@ Die REST API verwendet die etablierten HTTP Status Codes, um über das Ergebnis 
 | Get location map | /location/{id}/map | GET | | X | | |
 | Set/update location map | /location/{id}/map | POST | | | X | |
 
-### Plätze
+### Spaces
 | Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one space | /location/{locationId}/space/{id} | GET | | X | | |
@@ -53,7 +68,7 @@ Die REST API verwendet die etablierten HTTP Status Codes, um über das Ergebnis 
 | Create a new space in a location | /location/{locationId}/space/ | POST | | | X | |
 | Get spaces with availability information for a specific time period | /location/{locationId}/space/availability | POST | | X | | |
 
-### Organisationen
+### Organisations
 | Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one organization | /organization/{id} | GET | | | X | |
@@ -67,12 +82,12 @@ Die REST API verwendet die etablierten HTTP Status Codes, um über das Ergebnis 
 | Remove a domain from an organization | /organization/{id}/domain/{domain} | DELETE | | | X | |
 | Verify DNS-TXT-Record for a domain | /organization/{id}/domain/{domain}/verify | POST | | | X | |
 
-### Suche
+### Search
 | Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get search results for keyword | /search/{keyword} | GET | | X | | |
 
-### Einstellungen
+### Settings
 | Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get all settings | /setting/ | GET | | | X | |
@@ -80,18 +95,18 @@ Die REST API verwendet die etablierten HTTP Status Codes, um über das Ergebnis 
 | Get one setting | /setting/{name} | GET | | | X | |
 | Update one setting | /setting/{name} | PUT | | | X | |
 
-### Registrierung
+### Signup
 | Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Signup and init double-opt-in | /signup/ | POST | X | | | |
 | Complete double-opt-in process | /signup/confirm/{id} | POST | X | | | |
 
-### Statistiken
+### Statistics
 | Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get organization's stats | /stats/ | GET | | | X | |
 
-### Benutzer
+### Users
 | Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one user | /user/{id} | GET | | | X | |
