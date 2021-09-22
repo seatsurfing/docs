@@ -1,42 +1,41 @@
 # Mobile App
 
-## Einführung
-Die mobile App von Seatsurfing für die Betriebssysteme Google Android und Apple iOS finden Sie kostenfrei in den jeweiligen offiziellen App Stores:
+You can download Seatsurfing's mobile app for Google Android and Apple iOS for free in the app stores:
 
 * [App Store](https://apps.apple.com/app/seatsurfing/id1579071273)
 * [Google Play](https://play.google.com/store/apps/details?id=de.seatsurfing.app)
 
-Mit der App können Mitarbeiter Ihres Unternehmens ihre Sitzplätze selbständig buchen sowie bestehende Buchungen verwalten, inklusive der Stornierung zukünftiger eigener Buchungen.
+Your employees can use the app to book their spaces independently and to manage their bookings, including the cancellation of their own existing bookings.
 
 ![App Screenshots](img/app.png)
 
-## Einloggen
-Voraussetzung für das Einloggen in der Seatsurfing-App ist ein aktives Benutzerkonto in einer Seatsurfing-Organisation.
+## Logging in
+To log in, you need to know your Seatsurfing instance's URL and must have a user account. For both, ask your organisation's Seatsurfing administrators.
 
-Zum Anmelden starten Sie die App auf Ihrem mobilen Endgerät. Geben Sie zunächst die E-Mail-Adresse ein, mit der Ihr Organisations-Administrator Sie eingerichtet hat. Anschließend werden Ihnen die verfügbaren Login-Methoden angeboten.
+Start the app on your mobile device. Enter the backend URL and your email address. Afterwards, you can select one or more login methods.
 
-Wenn für Ihr Benutzerkonto ein Kennwort erforderlich ist, werden Sie nun zur Eingabe des Kennworts aufgefordert.
+If entering a password is required, you'll be asked to enter it.
 
-Ansonsten werden Ihnen die verfügbaren Authentifizierungs-Dienste Ihres Unternehmens eingeblendet. Wählen Sie einen Authentifizierungs-Dienst aus. Sie werden auf die Login-Seite des jeweiligen Authentifizierungs-Dienstes weitergeleitet. Eventuell werden Sie aus technischen Gründen nochmals nach Ihrer E-Mail-Adresse bzw. Ihrem Benutzernamen gefragt. Geben Sie hier bitte nochmals genau die selbe Adresse ein, die Sie auch zuvor innerhalb der App eingegeben haben. Nach der erfolgreichen Anmeldung werden Sie zur App zurückgeleitet. Die Weiterleitung kann je nach Verbindungsgeschwindigkeit einige Sekunden dauern.
+Otherwise, you'll see one or more available authentication methods. Choose one of them. You'll be redirected to your organisation's authentication service. Due to technical reasons, you may need to enter your email address a second time. After logging in, you'll be redirected back to the Seatsurfing ap. Depending on your connection, this might take a few seconds.
 
-Die App speichert Ihren Login sicher für Sie, sodass Sie sich nicht bei jedem Öffnen der App neu einloggen müssen. Wenn Sie das nicht wünschen, tippen Sie bitte nach Nutzung der App auf "Abmelden".
+The app stores your login credentials securely for you, so you don't need to sign in every time you start the app. If you don't want to use this feature, please tap "Sign off" after using the app.
 
-## Buchungen vornehmen
-Um eine neue Buchung vorzunehmen, stellen Sie zunächst den gewünschten Zeitraum ein und wählen Sie den Bereich (bspw. Stockwerk), in dem Sie sitzen möchten.
+## Place a booking
+To place a bookings, choose the desired period and area (i.e. floor).
 
-Anschließend werden Ihnen die verfügbaren Sitzplätze angezeigt. Grüne Sitzplätze sind im ausgewählten Zeitraum verfügbar. Sie können einen Platz buchen, in dem Sie ihn antippen. Rote Plätze sind hingegen bereits vergeben (ggfls. auch anteilig für den gewünschten Zeitraum - passen Sie dann gegebenenfalls Ihr gewähltes Zeitfenster an).
+You'll then see a floor plan showing the available (green) and unavailable (red) spaces. You can book a space by tapping it.
 
-Ihr Unternehmen kann zusätzliche Restriktionen für die Buchungen konfigurieren:
+Your organisation might have configured additional restrictions, such as:
 
-* Maximale Buchungsdauer
-* Maximale Anzahl der zukünftigen Buchungen pro Person
-* Maximaler Buchungs-Vorlauf
+* Max. booking duration
+* Max. number of upcoming bookings per person
+* Max. days a booking can be placed in advance
 
-Entsprechende Meldungen werden Ihnen auf der Suchmaske angezeigt.
+If such a restriction applies, an according message will be shown.
 
-## Buchungen verwalten
-Um Ihre zukünftigen Buchungen zu verwalten, tippen Sie auf "Meine Buchungen".
+## Manage bookings
+To manage your upcoming bookingsm tap "My bookings".
 
-Sie sehen Ihre anstehenden Buchungen in chronologisch aufsteigender Reihenfolge. Um Details zu einer Buchung anzuzeigen oder eine Buchung zu stornieren, tippen Sie bitte auf den entsprechenden Eintrag.
+You'll see a list of your upcoming bookings in ascending order. To show details or to cancel a booking, tap it.
 
-Die unmittelbare Änderung einer bestehenden Buchung (bspw. Anpassung des Zeitfensters oder des gewählten Platzes) ist nicht möglich. Stornieren Sie stattdessen die fragliche Buchung und nehmen Sie eine neue Buchung vor.
+To keep things simple, it's not possible to modify an existing booking. Instead, you'll have to cancel and place a new booking.

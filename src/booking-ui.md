@@ -1,13 +1,13 @@
-# Web-Buchungs-Oberfläche
+# Web Booking UI
 
-Die Web-Buchungs-Oberfläche steht Ihnen parallel zur den mobilen Apps zur Verfügung. Sie erreichen die Oberfläche mit einem aktuellen Web-Browser unter folgender Adresse:
+You can use the web booking interface instead of or in addition to the mobile apps. You can access the web booking UI using a modern web browser at:
 
 [http://localhost:8080/ui/](http://localhost:8080/ui/)
 
-Nach dem Login sehen Sie die Web-Oberfläche mit folgendem Aufbau:
+After logging in, the web booking UI should look like this:
 
 ![Booking UI Screenshot](img/booking-ui.png)
 
-Von hier aus können Sie direkt in die Buchung eines neuen Platzes einsteigen.
+From here, you can directly start to book a space.
 
-Über die Navigation am oberen Rand können Sie zudem Ihre bestehenden zukünftigen Buchungen einsehen.
+Using the navigation bar at the top of the screen, you can view your upcomings bookings.

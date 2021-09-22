@@ -25,67 +25,66 @@ Below that, you can see current booking numbers of today, yesterday, the current
 
 The bar charts visualize the utilization of your spaces.
 
-## Bereiche
-Als Bereich bezeichnen wir in Seatsurfing alles, was einen eigenen Grundriss hat. Das kann beispielsweise ein einzelnes Stockwerk eines Gebäudes sein. In diesem Bereich haben Sie die Möglichkeit, Plätze zu verwalten. Ein Platz ist hierbei eine eigenständig von einem Nutzer buchbarere Fläche – je nach Konzept also ein einzelner Sitzplatz, ein Schreibtisch oder ein ganzer Raum.
+## Areas
+An area in Seatsurfing is anything that has a ground plan. This can be a single floor on a building. In this area you can manage spaces. A space is something a user can book – depending on your concept, it can be a seat, a desk or an entire room.
 
-Im Abschnitt "Bereiche" können Sie diese Bereiche und die darin befindlichen Plätze administrieren.
+In the "Areas" section you can manage your areas and the spaces within them.
 
-Damit Sie Plätze in einem Bereich verwalten können, müssen Sie zuvor einen Raumplan im Format JPEG, PNG oder GIF von Ihrem Computer hochladen. Achten Sie darauf, dass der Raumplan ein angemessenes Format bzw. eine geeignete Auflösung hat. Ist die Auflösung zu hoch, müssen Ihre Mitarbeiter bei der Raumbuchung viel scrollen und verlieren möglicherweise den Überblick.
+In order to manage spaces in an area, you have to upload a floor plan in JPEG, PNG or GIF format. Make sure your floor plan has an appropriate format and resolution. If the resolution is too high, your employees need to scroll a lot and may lose the plot.
 
-Plätze können Sie per Drag & Drop platzieren. Halten Sie die linke Maustaste gedrückt und verschieben Sie einen Platz, bevor Sie die Maustaste loslassen. Zur Änderung der Größe eines Platzes klicken und halten Sie die untere rechte Ecke des Rechtecks. Zum Benennen klicken Sie auf die Bezeichnung im Rechteck und Ändern Sie den Namen entsprechend.
+You can place spaces via drag & drop. Keep the left mouse button pressed to move a space around. To change a space's size, click the lower right corner of a space. To name a space, click on the space's label and enter the new name.
 
-Vergessen Sie nach der Einrichtung der Plätze das Speichern nicht.
+Don't forget to save your changes afterwards.
 
-## Benutzer
-Im Abschnitt Benutzer verwalten Sie Ihre Mitarbeiter, die Zugriff auf Ihre Seatsurfing-Organisation haben.
+## Users
+In the "Users" section you can manage your employees which have access to your Seatsurfing organisation.
 
-Je nach Konfiguration in den Einstellungen (siehe unten) können sich Mitarbeiter, die in Ihrem Unternehmensverzeichnis hinterlegt sind, auch ohne explizite Administration der einzelnen Nutzer anmelden. Ihr Benutzerkonto in Ihrer Seatsurfing-Organisation wird in diesem Fall automatisch bei der ersten Anmeldung angelegt.
+Depending on your configuration in the Settings (see below), your employees can log in to Seatsurfing when successfully authenticated against your corporation's user directory service. This way, there's no need to administer all Seatsurfing users manually. When logging in for the first time, a Seatsurfing user account is created automatically.
 
-Um Benutzer manuell anzulegen oder zu bearbeiten, nutzen Sie den Button "Neu" oder klicken Sie auf den entsprechenden Benutzer in der Liste. Hier können Sie den Anmelde-Namen in Form einer E-Mail-Adresse sowie das Kennwort eingeben. Letzteres ist nur notwendig, wenn sich der Benutzer nicht über Ihren verknüpften Verzeichnisdienst anmeldet.
+To create or modify users manually, click the "Add" button or click a user from the list. You can set the username (using the user's email address) and his password. Setting a password is only necessary if your user is not authenticating using a linked authentication provider.
 
-Zusätzlich können Sie Benutzer als Administrator kennzeichnen. Administratoren haben vollen Zugriff auf die Seatsurfing Administrations-Oberfläche. Seien Sie also vorsichtig, wem Sie eine Administrations-Berechtigung erteilen. Administratoren sollten zudem besonders sichere, komplexe Kennwörter verwenden.
+Additionally, you can flag certain users as organisation administrators. Administrators have full access to Seatsurfing's administrator web-interface. Thus, administrators should have long, secure and complex passwords.
 
-## Buchungen
-In den Buchungen können Sie die Buchungen Ihrer Mitarbeiter in einem bestimmten Zeitraum einsehen.
+## Bookings
+In the "Bookings" section you can view the bookings of your emloyees in a certain period.
 
-Den Zeitraum können Sie tagesgenau im oberen Bereich auswählen.
+You can choose the period to be shown in the area at the top.
 
-Eine Änderung bestehender Buchungen durch den Administrator ist nicht möglich.
+Adding or changing bookings through administrators is not possible.
 
-## Einstellungen
-In den Einstellungen konfigurieren Sie grundsätzliche Einstellungen Ihrer Seatsurfing-Organisation.
+## Settings
+In the "Settings" section you can configure settings which apply to your entire Seatsurfing organisation.
 
-### Allgemeine Einstellungen
-**Login aller authentifzierbaren Benutzer erlauben:** Wenn diese Option aktiviert ist, können sich Benutzer über einen hinterlegten Verzeichnisdienst (Auth Provider, siehe unten) anmelden, auch wenn sie nicht explizit in Ihrer Seatsurfing-Organisation administriert sind. Das Benutzerkonto wird dann automatisch angelegt, wenn die erste erfolgreiche Anmeldung durchgeführt wird.
+### Common settings
+**Allow login of all authenticatable users:** When enabled, users can authenticate using an associated auth provider (see below) without having to be managed in Seatsurfing's internal user directory beforehand. A user account in Seatsurfing's database will be created upon first successful authentication.
 
-**Buchungen je Nutzer:** Limitiert die Anzahl der zukünftigen Buchungen je Benutzer.
+**Max. bookings per user:** Limits the number of upcoming bookings per user.
 
-**Max. Buchungs-Vorlauf:** Limitiert den Vorlauf von Buchungen.
+**Max. days in advance:** Specifies how many days in advance a booking can be placed.
 
-**Max. Buchungs-Dauer:** Limitiert die Dauer einer Buchung.
+**Allow bookings on a daily basis only**: When enabled, users can book spaces for entire days only and do not need to enter enter and leave times.
 
-**Domains:** Gibt die Domains an, innerhalb deren Namensraum Ihre Benutzer sich befinden können. Nach dem Hinzufügen einer Domain ist die Bestätigung der Inhaberschaft zur Aktivierung erforderlich. Dies erfordert Zugriff auf den DNS-Server der jeweiligen Domain, da ein TXT-Record angelegt werden muss.
+**Max. booking duration:** Limits the duration of a single bookings.
 
-### Abonnement
-Hier sehen Sie den Umfang Ihres abgeschlossenen Seatsurfing-Abonnements. Wenn Sie bislang die kostenfreie Version nutzen, können Sie ein neues Abonnement abschließen. Wenn Sie bereits ein Paket gebucht haben, können Sie Ihr Abonnement verwalten und dessen Umfang verändern oder Ihre Subscription beenden.
+**Show bookers' names**: Reveal the names of other bookers when booking a space. You should mind the privacy.
 
-Die Verwaltung Ihres Abonnements erfolgt über unseren Partner FastSpring bzw. das Unternehmen Bright Market, LLC. Zum Verwalten Ihrer Subscription werden daher Ihre Unternehmens- und Ansprechpartner-Stammdaten an FastSpring übertragen.
+**Confluence Shared Secret:** A shared secret which is required for signing messages when using Seatsurfing's Confluence App.
 
-Sie können Ihr Abonnement monatlich verändern und kündigen. Wenn Sie Ihr Abonnement kündigen oder die Anzahl der lizensierten Benutzer unter die aktuell vorhandene Anzahl an Benutzern reduzieren, bleiben die bestehenden Benutzer erhalten. Jedoch können sich Benutzer, die keine Administratoren sind, dann nicht mehr anmelden, bis Sie die lizensierte Maximalanzahl wieder erreicht oder unterschritten haben.
+**Domains:** A list of domains which can be used your user's email addresses. If not a global administrator, adding a domain requires an ownership verification. This requires access to your domain's DNS server as a TXT record needs to be added.
 
 ### Auth Providers
-Authentifizierungs-Provider sind Dienste, die bei der Anmeldung an Seatsurfing die Authentifizierung über standardisierte Protokolle übernehmen. Seatsurfing unterstützt aktuell OAuth 2 und OpenID Connect (OIDC). Hierdurch können Sie Benutzeranmeldungen gegen Ihr unternehmensinternes Benutzerverzeichnis validieren. Die Kennwörter werden hierbei innerhalb des jeweiligen Diensts in Ihrer Infrastruktur eingegeben und nicht an Seatsurfing übertragen.
+Auth providers are services taking care of authenticating your users using standardised, secure protocols. Seatsurfing currently supports the OAuth 2 protocol.
 
-Um einen Auth Provider hinzuzufügen, klicken Sie auf den entsprechenden Button. Je nach Auth Provider Typ werden verschiedene technische Informationen benötigt. Wenden Sie sich gegebenenfalls an den technischen Administrator Ihres Authentifizierungsdiensts, um diese Informationen zu erhalten.
+By adding an auth provider, you can validate your Seatsurfing logins using your company's internal user directory. The passwords (or other identification criteria) entered by your users are not transferred to Seatsurfing when using an auth provider.
 
-Auth Provider können zusätzlich zur Kennwort-Authentifizierung innerhalb von Seatsurfing eingesetzt werden. Es wird bei der Anmeldung zunächst geprüft, ob der angegebene Benutzer im Seatsurfing-Benutzerverzeichnis existiert und die Kennwort-Anmeldung aktiviert ist. Ist dies der Fall, wird der Benutzer von Seatsurfing zur Eingabe eines Kennworts aufgefordert. Ansonsten ist eine Anmeldung über einen der von Ihnen hinterlegen Auth Provider möglich.
+To add an auth provider, click the Add button at the upper right. Depending on the type of your auth provider, various different technical information are needed. Please ask your auth provider's technical administrator for these information. You can also use the templates prepared at the bottom of the dialog.
 
-### Kritische Funktionen
-In diesem Abschnitt können Sie Ihre Seatsurfing-Organisation löschen. Die Löschung erfolgt nach einer Sicherheitsabfrage und ist unwiderruflich. Alle Ihre Daten auf den Seatsurfing-Servern werden dabei gelöscht und können nicht wiederhergestellt werden. Nutzen Sie diese Funktion also nur, wenn Sie sich absolut sicher sind.
+Auth providers can be used in addition to password authentication. When logging in, Seatsurfing checks if the requested user already exists in Seatsurfing's internal user directory. If he does exist and password authentication is enabled, the user will be prompted for her password. If it does not exists or has no password set, she can log in using one of the configured auth providers.
 
-Bitte melden Sie sich bei uns, wenn Sie Fragen zur Nutzung oder Anforderungen an den Funktionsumfang haben.
+### Danger zone
+Use this section to delete your Seatsurfing organisation. The deletion is peformed irrevocably. All data associated with your Seatsurfing organisation will be deleted and can not be restored. You should *only* use this functionality if you're absolutely sure about what you're doing.
 
-## Suche
-Die Suchfunktion am oberen Bereich der Administrations-Oberfläche verwenden SIe durch Eingeben eines Suchbegriffs und Betätigen der Enter-Taste.
+## Search
+The search box at the top of the administator web-interface can be used by entering a keyword and pressing the enter key.
 
-Die Suchfunktion umfasst die E-Mail-Adressen von Benutzern sowie die Namen von Bereichen und Plätzen.
+Search includes your users' email addresses (usernames) as well as the names of areas and spaces.
