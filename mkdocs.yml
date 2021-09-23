@@ -7,11 +7,15 @@ theme:
 extra_css:
     - stylesheets/extra.css
 nav:
-    - 'index.md'
+    - 'Home': 'index.md'
     - 'features.md'
     - 'getting-started.md'
     - 'config.md'
-    - 'admin-ui.md'
+    - 'Administration':
+        - 'admin-ui.md'
+        - 'Auth Providers':
+            - 'auth-provider/azure.md'
+            - 'auth-provider/google.md'
     - 'app.md'
     - 'booking-ui.md'
     - 'confluence.md'

@@ -1,4 +1,4 @@
-# Home
+# Seatsurfing Documentation
 
 Seatsurfing is a cloud native solution for free seating and co-working in your organisation.
 

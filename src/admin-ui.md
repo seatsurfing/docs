@@ -1,4 +1,4 @@
-# Administration
+# Administration UI
 
 You can access the adminisatration web interface using a modern web browser by visiting your Seatsurfing's instance backend:
 
