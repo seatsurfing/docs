@@ -29,7 +29,7 @@ services:
       - 8080:8080
     environment:
       POSTGRES_URL: 'postgres://seatsurfing:DB_PASSWORD@db/seatsurfing?sslmode=disable'
-      JWT_SIGNING_KEY: 'hier_eine_zufällige_zeichenkette_eingeben'
+      JWT_SIGNING_KEY: 'a_random_key'
   db:
     image: postgres:12
     restart: always
