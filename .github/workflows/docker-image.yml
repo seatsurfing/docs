@@ -14,5 +14,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --pull --file Dockerfile --tag seatsurfing/docs:${GITHUB_SHA::6} --tag seatsurfing/docs:latest
+    - name: Log into registry
+      if: github.event_name != 'pull_request'
+      uses: docker/login-action@v1
+      with:
+        registry: docker.io
+        username: seatsurfing
+        password: ${{ secrets.CI_REGISTRY_PASSWORD }}
+    - name: Build and push
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        tags: |
+          seatsurfing/docs:${GITHUB_SHA::6}
+          seatsurfing/docs:latest
