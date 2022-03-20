@@ -1,4 +1,4 @@
-# Getting started
+# Docker / Compose
 
 ## 1. System Requirements
 To set up the Seatsurfing backend on your server, the following system requirements must be met:
@@ -12,7 +12,7 @@ To set up the Seatsurfing backend on your server, the following system requireme
 ## 2. Setting up the container
 The following example demonstrates setting up Seatsurfing backend using Docker Compose. We'll start the required PostgreSQL database as part of the compose file. Alternatively, you can set up Seatsurfing using ```docker run```, using an external Postgres database of using Kubernetes.
 
-For simplicity and demonstration purposes only, container port 8080 is published directly on the host. When using Seatsurfing in production, you should place a revery proxy in front of the Seatsurfing backend which also takes care of TLS termination.
+For simplicity and demonstration purposes only, container port 8080 is published directly on the host. When using Seatsurfing in production, you should place a reverse proxy in front of the Seatsurfing backend which also takes care of TLS termination.
 
 #### docker-compose.yml
 
@@ -54,9 +54,9 @@ Start the Seatsurfing backend by running: ```docker-compose up -d```
 Afterwards, Seatsurfing can be accessed at: [http://localhost:8080](http://localhost:8080)
 
 ## 3. Initial configration
-Access the administrator web-interface using a modern web browser (i.e. Chrome, Firefox, Safari) at: [Administrations-Oberfläche](http://localhost:8080/admin/)
+Access the administrator web-interface using a modern web browser (i.e. Chrome, Firefox, Safari) at: [Admin UI](http://localhost:8080/admin/)
 
-By defaullt, an organisation with one administrator account is created on backend startup if no organisation already exists in the specified database. If not defined otherwise, use ```admin@seatsurfing.local``` as the username and ```12345678``` as the password.
+By default, an organisation with one administrator account is created on backend startup if no organisation already exists in the specified database. If not defined otherwise, use ```admin@seatsurfing.local``` as the username and ```12345678``` as the password.
 
 The administrator interface can be used to manage room plans, users and settings. Read more about it in the [Administration](admin-ui.md) section.
 
