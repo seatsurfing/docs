@@ -9,7 +9,9 @@ extra_css:
 nav:
     - 'Home': 'index.md'
     - 'features.md'
-    - 'getting-started.md'
+    - 'Getting started':
+        - 'getting-started.md'
+        - 'kubernetes.md'
     - 'upgrading.md'
     - 'config.md'
     - 'Administration':
