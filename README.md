@@ -4,4 +4,4 @@ Seatsurfing Docs contains the documentation required for installing and using [S
 
 Docs are built and pushed to Docker Hub using GitHub Actions.
 
-[You can read the docs here](https://docs.seatsurfing.app).
+[You can read the docs here](https://seatsurfing.github.io/docs/).
