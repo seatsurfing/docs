@@ -3,7 +3,7 @@
 You can connect your [Keycloak](https://www.keycloak.org/)-instance as an Auth Provider for Seatsurfing.
 
 ## 1. Configure your Keycloak-instance
-1. Log in to your instance' admninistration console.
+1. Log in to your instance' administration console.
 1. Goto Clients and click Create.
 1. Choose a Client-ID, select openid-connect and enter as Root URL the complete URL of your Seatsurfing installation and click Save.
 1. Now Change Access Type to confidential.
@@ -15,9 +15,9 @@ You can connect your [Keycloak](https://www.keycloak.org/)-instance as an Auth P
 1. Log in to Seatsurfing's Administrator UI.
 1. Navigate to Settings and add a new Auth Provider.
 1. Select the Keycloak template.
-1. Paste the Client ID you have choosen inkeycloak into the "Client ID" field.
+1. Paste the Client ID you have choosen in keycloak into the "Client ID" field.
 1. Paste the Secret Value into the "Client Secret" field.
-1. Change all _keycloakhost.sample_ to your hostname and optional _master_ to your realm
+1. Change all _keycloakhost.sample_ to your hostname and optional _master_ to your realm.
 1. Save the Auth Provider.
 1. Copy the Callback URL which is displayed right after saving.
 
