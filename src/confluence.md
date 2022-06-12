@@ -12,6 +12,8 @@ Coming soon.
 ## Confluence Data Center
 [Atlassian Marketplace](https://marketplace.atlassian.com/manage/apps/1224242/)
 
+Coming soon.
+
 Note: 
 In the default version of the plugin all logged in confluence-users are mapped to confluence-&lt;username&gt;@&lt;seatsurfing-defaultdomain&gt;. 
 
