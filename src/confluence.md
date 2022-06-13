@@ -14,5 +14,11 @@ Coming soon.
 
 Coming soon.
 
+Note: 
+In the default version of the plugin all logged in confluence-users are mapped to confluence-&lt;username&gt;@&lt;seatsurfing-defaultdomain&gt;. 
+
+Using Seatsurfing 1.9.0 and above you can change the java-plugin-sources in `src/main/java/de/seatsurfing/confluence/SeatsurfingMacro.java` from 
+`.withClaim("user", user.getName())` to `.withClaim("user", user.getEmail())` to use the complete email-address of the confluence user to login into seatsurfing. Using OpenID-Authentication your users can login via confluence or Azure-AD/Google/Keycloak without any manual usermapping.
+
 ## Confluence Server
 Coming soon.

@@ -43,7 +43,8 @@ Seatsurfing's REST API uses the well known HTTP status codes to inform the calle
 | Get one own booking | /booking/{id} | GET | | X | | |
 | Update one own booking | /booking/{id} | PUT | | X | | |
 | Delete one own booking | /booking/{id} | DELETE | | X | | |
-| Create new booking | /booking/ | POST | | X | | |
+| Create new own booking | /booking/ | POST | | X | | |
+| Create new booking for others | /booking/ | POST | | | X | |
 | Get user's own upcoming bookings | /booking/ | GET | | X | | |
 | Get filtered org bookings | /booking/filter/ | POST | | | X | |
 
