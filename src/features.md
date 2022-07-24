@@ -17,13 +17,12 @@ Seatsurfing consists of:
 
 * A server backend providing a REST API
 * A web-based administrator interface for ones managing the spaces and users (bundled with the server backend)
-* A mobile app for iOS and Android which can be used by an organisation's employees to book seats
-* A web app which can be used instead of the mobile app (also available as a Confluence App, bundled with the server backend)
+* A mobile-ready progressive web app (PWA) which can be used by an organisation's employees to book seats (also available as a Confluence App, bundled with the server backend)
 
 ## Features
 The most important features of Seatsurfing are:
 
-* Booking seats quickly and flexibly using a mobile app
+* Booking seats quickly and flexibly using a mobile-ready web app
 * Logging in via password or OAuth2
 * Uploading room plans as JPEG, PNG or GIF
 * Placing spaces/seats via drag & drop

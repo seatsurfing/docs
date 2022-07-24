@@ -20,7 +20,6 @@ nav:
             - 'auth-provider/azure.md'
             - 'auth-provider/google.md'
             - 'auth-provider/keycloak.md'
-    - 'app.md'
     - 'booking-ui.md'
     - 'confluence.md'
     - 'rest-api.md'
