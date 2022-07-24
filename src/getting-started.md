@@ -54,14 +54,13 @@ Start the Seatsurfing backend by running: ```docker-compose up -d```
 Afterwards, Seatsurfing can be accessed at: [http://localhost:8080](http://localhost:8080)
 
 ## 3. Initial configration
-Access the administrator web-interface using a modern web browser (i.e. Chrome, Firefox, Safari) at: [Admin UI](http://localhost:8080/admin/)
+Access the administrator web-interface using a modern web browser (i.e. Chrome, Firefox, Safari) at: [http://localhost:8080/admin/](http://localhost:8080/admin/)
 
 By default, an organisation with one administrator account is created on backend startup if no organisation already exists in the specified database. If not defined otherwise, use ```admin@seatsurfing.local``` as the username and ```12345678``` as the password.
 
 The administrator interface can be used to manage room plans, users and settings. Read more about it in the [Administration](admin-ui.md) section.
 
-## 4. Getting the mobile app
-You can download the mobile apps for iOS and Android for free in Apple's App Store and on Google Play:
+## 4. Use the web app to book spaces
+Let your coworkers use the progressive web app (PWA) to book spaces using their mobile devices or desktop computers:
 
-* [App Store](https://apps.apple.com/app/seatsurfing/id1579071273)
-* [Google Play](https://play.google.com/store/apps/details?id=de.seatsurfing.app)
+[http://localhost:8080/ui/](http://localhost:8080/ui/)

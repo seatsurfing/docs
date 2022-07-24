@@ -228,8 +228,7 @@ By default, an organisation with one administrator account is created on backend
 
 The administrator interface can be used to manage room plans, users and settings. Read more about it in the [Administration](admin-ui.md) section.
 
-## 6. Getting the mobile app
-You can download the mobile apps for iOS and Android for free in Apple's App Store and on Google Play:
+## 6. Use the web app to book spaces
+Let your coworkers use the progressive web app (PWA) to book spaces using their mobile devices or desktop computers:
 
-* [App Store](https://apps.apple.com/app/seatsurfing/id1579071273)
-* [Google Play](https://play.google.com/store/apps/details?id=de.seatsurfing.app)
+[http://localhost:8080/ui/](http://localhost:8080/ui/)
