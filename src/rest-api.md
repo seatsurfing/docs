@@ -29,7 +29,7 @@ Seatsurfing's REST API uses the well known HTTP status codes to inform the calle
 ## Endpoints
 
 ### Authentication
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Password Login | /auth/login | POST | X | | | |
 | Preflight Login to check for available login methods | /auth/preflight | POST | X | | | |
@@ -38,7 +38,7 @@ Seatsurfing's REST API uses the well known HTTP status codes to inform the calle
 | Retrieve JWT from frontend / app after OAuth Login | /auth/verify/{id} | GET | X | | | |
 
 ### Bookings
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one own booking | /booking/{id} | GET | | X | | |
 | Update one own booking | /booking/{id} | PUT | | X | | |
@@ -49,7 +49,7 @@ Seatsurfing's REST API uses the well known HTTP status codes to inform the calle
 | Get filtered org bookings | /booking/filter/ | POST | | | X | |
 
 ### Locations
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one location | /location/{id} | GET | | X | | |
 | Update one location | /location/{id} | PUT | | | X | |
@@ -60,7 +60,7 @@ Seatsurfing's REST API uses the well known HTTP status codes to inform the calle
 | Set/update location map | /location/{id}/map | POST | | | X | |
 
 ### Spaces
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one space | /location/{locationId}/space/{id} | GET | | X | | |
 | Update one space | /location/{locationId}/space/{id} | PUT | | | X | |
@@ -70,7 +70,7 @@ Seatsurfing's REST API uses the well known HTTP status codes to inform the calle
 | Get spaces with availability information for a specific time period | /location/{locationId}/space/availability | POST | | X | | |
 
 ### Organisations
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one organization | /organization/{id} | GET | | | X | |
 | Update one organization | /organization/{id} | PUT | | | | X |
@@ -84,12 +84,12 @@ Seatsurfing's REST API uses the well known HTTP status codes to inform the calle
 | Verify DNS-TXT-Record for a domain | /organization/{id}/domain/{domain}/verify | POST | | | X | |
 
 ### Search
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get search results for keyword | /search/{keyword} | GET | | X | | |
 
 ### Settings
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get all settings | /setting/ | GET | | | X | |
 | Update all settings | /setting/ | PUT | | | X | |
@@ -97,18 +97,18 @@ Seatsurfing's REST API uses the well known HTTP status codes to inform the calle
 | Update one setting | /setting/{name} | PUT | | | X | |
 
 ### Signup
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Signup and init double-opt-in | /signup/ | POST | X | | | |
 | Complete double-opt-in process | /signup/confirm/{id} | POST | X | | | |
 
 ### Statistics
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get organization's stats | /stats/ | GET | | | X | |
 
 ### Users
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one user | /user/{id} | GET | | | X | |
 | Update one user | /user/{id} | PUT | | | X | |
@@ -119,7 +119,7 @@ Seatsurfing's REST API uses the well known HTTP status codes to inform the calle
 | Get user's own details | /user/me | GET | | X | | |
 
 ### Auth Providers
-| Funktion | Endpunkt | Methode | Anonym | User | Org Admin | Super Admin |
+| Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Get one auth provider | /auth-provider/{id} | GET | | | X | |
 | Update one auth provider | /auth-provider/{id} | PUT | | | X | |
