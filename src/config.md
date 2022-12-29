@@ -6,13 +6,13 @@ While you can configure organisation-specific settings in the administrator web 
 ```
 environment:
   POSTGRES_URL: 'postgres://seatsurfing:DB_PASSWORD@db/seatsurfing?sslmode=disable'
-  INIT_ORG_DOMAIN: 'ihre-domain.de'
+  INIT_ORG_DOMAIN: 'your-domain.com'
   ...
 ```
 
 ## Example: Using ```docker run```
 ```
-docker run -e "INIT_ORG_DOMAIN=ihre-domain.de" -e "POSTGRES_URL=..." seatsurfing/backend
+docker run -e "INIT_ORG_DOMAIN=your-domain.com" -e "POSTGRES_URL=..." seatsurfing/backend
 ```
 
 ## List of environment variables
@@ -23,7 +23,6 @@ docker run -e "INIT_ORG_DOMAIN=ihre-domain.de" -e "POSTGRES_URL=..." seatsurfing
 | PUBLIC_LISTEN_ADDR | string | 0.0.0.0:8080 | TCP/IP listen address and port |
 | PUBLIC_URL | string | http://localhost:8080 | Public URL |
 | FRONTEND_URL | string | http://localhost:8080 | Frontend URL (usually matches the Public URL) |
-| APP_URL | string | seatsurfing:/// | App URL (should not be changed) |
 | STATIC_ADMIN_UI_PATH | string | /app/adminui | Path to compiled Admin UI files |
 | STATIC_BOOKING_UI_PATH | string | /app/bookingui | Path to compiled Booking UI files |
 | POSTGRES_URL | string | postgres://postgres:root @ localhost/seatsurfing?sslmode=disable | PostgreSQL Connection |
@@ -49,3 +48,6 @@ docker run -e "INIT_ORG_DOMAIN=ihre-domain.de" -e "POSTGRES_URL=..." seatsurfing
 | ORG_SIGNUP_ADMIN | string | admin | Admin username for new signups |
 | ORG_SIGNUP_MAX_USERS | int | 50 | Maximum number of users for new organisations |
 | ORG_SIGNUP_DELETE | bool | 0 | Allow admins to delete their own organisation |
+| LOGIN_PROTECTION_MAX_FAILS | int | 10 | Number of failed login attempts before user gets banned |
+| LOGIN_PROTECTION_SLIDING_WINDOW_SECONDS | int | 600 | Sliding window size in seconds for checking failed login attempts  |
+| LOGIN_PROTECTION_BAN_MINUTES | int | 5 | Ban time in minutes |

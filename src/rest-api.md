@@ -36,6 +36,7 @@ Seatsurfing's REST API uses the well known HTTP status codes to inform the calle
 | Perform OAuth Login | /auth/{id}/login/{type} | GET | X | | | |
 | OAuth Callback (server to server) | /auth/{id}/callback | GET | X | | | |
 | Retrieve JWT from frontend / app after OAuth Login | /auth/verify/{id} | GET | X | | | |
+| Check if instance hosts one organization only | /auth/singleorg | GET | X | | | |
 
 ### Bookings
 | Function | Endpoint | Method | Anonymous | User | Org Admin | Super Admin |
