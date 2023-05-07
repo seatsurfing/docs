@@ -6,11 +6,11 @@ To set up the Seatsurfing backend on your server, the following system requireme
 * Linux server
 * Docker runtime environment (or CRI/containerd in case of Kubernetes, tested with Docker Engine version 20.x and containerd version 1.4.x)
 * PostgreSQL (tested with PostgreSQL version 12.x and 13.x)
-* Optionally: Docker Compose (tested with Docker Comopse version 1.29)
+* Optionally: Docker Compose (tested with Docker Comopse version 2.x)
 * Recommended: Reverse proxy with TLS termination (tested with Traefik version 2.x)
 
 ## 2. Setting up the container
-The following example demonstrates setting up Seatsurfing backend using Docker Compose. We'll start the required PostgreSQL database as part of the compose file. Alternatively, you can set up Seatsurfing using ```docker run```, using an external Postgres database of using Kubernetes.
+The following example demonstrates setting up Seatsurfing backend using Docker Compose. We'll start the required PostgreSQL database as part of the compose file.
 
 For simplicity and demonstration purposes only, container port 8080 is published directly on the host. When using Seatsurfing in production, you should place a reverse proxy in front of the Seatsurfing backend which also takes care of TLS termination.
 
@@ -25,11 +25,24 @@ services:
     restart: always
     networks:
       sql:
+      http:
     ports:
       - 8080:8080
     environment:
       POSTGRES_URL: 'postgres://seatsurfing:DB_PASSWORD@db/seatsurfing?sslmode=disable'
-      JWT_SIGNING_KEY: 'a_random_key'
+      JWT_SIGNING_KEY: 'some_random_string'
+      BOOKING_UI_BACKEND: 'booking-ui:3001'
+      ADMIN_UI_BACKEND: 'admin-ui:3000'
+  booking-ui:
+    image: seatsurfing/booking-ui
+    restart: always
+    networks:
+      http:
+  admin-ui:
+    image: seatsurfing/admin-ui
+    restart: always
+    networks:
+      http:
   db:
     image: postgres:12
     restart: always
@@ -47,9 +60,16 @@ volumes:
 
 networks:
   sql:
+  http:
 ```
 
-Start the Seatsurfing backend by running: ```docker-compose up -d```
+This starts...
+* a PostgreSQL database with data stored on Docker volume "db"
+* a Seatsurfing Backend instance with port 8080 exposed.
+* a Seatsurfing Booking UI instance which is accessible through the Backend instance at: :8080/ui/
+* a Seatsurfing Admin UI instance which is accessible through the Backend instance at: :8080/admin/
+
+Start the Seatsurfing backend by running: ```docker compose up -d```
 
 Afterwards, Seatsurfing can be accessed at: [http://localhost:8080](http://localhost:8080)
 
