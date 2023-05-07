@@ -10,11 +10,6 @@ environment:
   ...
 ```
 
-## Example: Using ```docker run```
-```
-docker run -e "INIT_ORG_DOMAIN=your-domain.com" -e "POSTGRES_URL=..." seatsurfing/backend
-```
-
 ## List of environment variables
 
 | Environment Variable | Type | Default | Description |
@@ -23,10 +18,11 @@ docker run -e "INIT_ORG_DOMAIN=your-domain.com" -e "POSTGRES_URL=..." seatsurfin
 | PUBLIC_LISTEN_ADDR | string | 0.0.0.0:8080 | TCP/IP listen address and port |
 | PUBLIC_URL | string | http://localhost:8080 | Public URL |
 | FRONTEND_URL | string | http://localhost:8080 | Frontend URL (usually matches the Public URL) |
-| STATIC_ADMIN_UI_PATH | string | /app/adminui | Path to compiled Admin UI files |
-| STATIC_BOOKING_UI_PATH | string | /app/bookingui | Path to compiled Booking UI files |
+| ADMIN_UI_BACKEND | string | localhost:3000 | Host serving the Admin UI frontend |
+| BOOKING_UI_BACKEND | string | localhost:3001 | Host serving the Booking UI frontend |
+| DISABLE_UI_PROXY | bool | 0 | Disable proxy for admin and booking UI, set to 1 to disable the proxy |
 | POSTGRES_URL | string | postgres://postgres:root @ localhost/seatsurfing?sslmode=disable | PostgreSQL Connection |
-| JWT_SIGNING_KEY | string | random string | JWT Signing Key |
+| JWT _SIGNING_KEY | string | random string | JWT Signing Key |
 | SMTP_HOST | string | 127.0.0.1 | SMTP server address |
 | SMTP_PORT | int | 25 | SMTP server port |
 | SMTP_START_TLS | bool | 0 | Use SMTP STARTTLS extension, set to 1 to enable |
