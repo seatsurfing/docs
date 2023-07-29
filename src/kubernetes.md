@@ -183,9 +183,15 @@ spec:
       - image: seatsurfing/booking-ui:latest
         name: booking-ui
         imagePullPolicy: Always
+        env:
+        - name: FRONTEND_URL
+          value: "https://seatsurfing.your-domain.com"
       - image: seatsurfing/admin-ui:latest
         name: admin-ui
         imagePullPolicy: Always
+        env:
+        - name: FRONTEND_URL
+          value: "https://seatsurfing.your-domain.com"
 ---
 apiVersion: v1
 kind: Service

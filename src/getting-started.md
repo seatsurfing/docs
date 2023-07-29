@@ -33,16 +33,22 @@ services:
       JWT_SIGNING_KEY: 'some_random_string'
       BOOKING_UI_BACKEND: 'booking-ui:3001'
       ADMIN_UI_BACKEND: 'admin-ui:3000'
+      PUBLIC_URL: 'https://seatsurfing.your-domain.com'
+      FRONTEND_URL: 'https://seatsurfing.your-domain.com'
   booking-ui:
     image: seatsurfing/booking-ui
     restart: always
     networks:
       http:
+    environment:
+      FRONTEND_URL: 'https://seatsurfing.your-domain.com'
   admin-ui:
     image: seatsurfing/admin-ui
     restart: always
     networks:
       http:
+    environment:
+      FRONTEND_URL: 'https://seatsurfing.your-domain.com'
   db:
     image: postgres:12
     restart: always
