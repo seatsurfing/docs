@@ -12,6 +12,7 @@ environment:
 
 ## List of environment variables
 
+### Backend
 | Environment Variable | Type | Default | Description |
 | --- | --- | --- | --- |
 | DEV | bool | 0 | Development Mode, set to 1 to enable  |
@@ -47,3 +48,9 @@ environment:
 | LOGIN_PROTECTION_MAX_FAILS | int | 10 | Number of failed login attempts before user gets banned |
 | LOGIN_PROTECTION_SLIDING_WINDOW_SECONDS | int | 600 | Sliding window size in seconds for checking failed login attempts  |
 | LOGIN_PROTECTION_BAN_MINUTES | int | 5 | Ban time in minutes |
+
+### Frontend (Admin UI, Booking UI)
+| Environment Variable | Type | Default | Description |
+| --- | --- | --- | --- |
+| FRONTEND_URL | string | ```req.url``` | Frontend URL |
+| PORT | int | 3000 (Admin UI), 3001 (Booking UI) | The server's HTTP port |
