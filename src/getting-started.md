@@ -5,7 +5,7 @@ To set up the Seatsurfing backend on your server, the following system requireme
 
 * Linux server
 * Docker runtime environment (or CRI/containerd in case of Kubernetes, tested with Docker Engine version 20.x and containerd version 1.4.x)
-* PostgreSQL (tested with PostgreSQL version 12.x and 13.x)
+* PostgreSQL (tested with PostgreSQL version 12 to 16)
 * Optionally: Docker Compose (tested with Docker Comopse version 2.x)
 * Recommended: Reverse proxy with TLS termination (tested with Traefik version 2.x)
 
@@ -21,7 +21,7 @@ version: '3.7'
 
 services:
   server:
-    image: seatsurfing/backend
+    image: ghcr.io/seatsurfing/backend
     restart: always
     networks:
       sql:
@@ -36,21 +36,21 @@ services:
       PUBLIC_URL: 'https://seatsurfing.your-domain.com'
       FRONTEND_URL: 'https://seatsurfing.your-domain.com'
   booking-ui:
-    image: seatsurfing/booking-ui
+    image: ghcr.io/seatsurfing/booking-ui
     restart: always
     networks:
       http:
     environment:
       FRONTEND_URL: 'https://seatsurfing.your-domain.com'
   admin-ui:
-    image: seatsurfing/admin-ui
+    image: ghcr.io/seatsurfing/admin-ui
     restart: always
     networks:
       http:
     environment:
       FRONTEND_URL: 'https://seatsurfing.your-domain.com'
   db:
-    image: postgres:12
+    image: postgres:16
     restart: always
     networks:
       sql:

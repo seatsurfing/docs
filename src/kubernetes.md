@@ -22,7 +22,7 @@ Make sure to replace ```DB_PASSWORD``` with a secure password.
 Next, we'll create the necessary configurations and deployment for the Postgres database. This configuration contains:
 
 * A persistent volume claim which contains the database files (adjust as needed)
-* A deployment of Postgres version 13, inluding some adjustments to make sure Postgres runs well on Kubernetes
+* A deployment of Postgres version 16, inluding some adjustments to make sure Postgres runs well on Kubernetes
 * A service which exposes TCP port 5432 of our Postgres database server
 * A network policy which ensures that only our Seatsurfing backend is able to connect to the Postgres database service
 
@@ -73,7 +73,7 @@ spec:
           readOnly: false
           subPath: postgres
       containers:
-      - image: postgres:13
+      - image: postgres:16
         name: db
         imagePullPolicy: Always
         ports:
@@ -160,7 +160,7 @@ spec:
         app: seatsurfing-backend
     spec:
       containers:
-      - image: seatsurfing/backend:latest
+      - image: ghcr.io/seatsurfing/backend:latest
         name: server
         imagePullPolicy: Always
         ports:
@@ -180,13 +180,13 @@ spec:
           value: "https://seatsurfing.your-domain.com" 
         - name: FRONTEND_URL
           value: "https://seatsurfing.your-domain.com"
-      - image: seatsurfing/booking-ui:latest
+      - image: ghcr.io/seatsurfing/booking-ui:latest
         name: booking-ui
         imagePullPolicy: Always
         env:
         - name: FRONTEND_URL
           value: "https://seatsurfing.your-domain.com"
-      - image: seatsurfing/admin-ui:latest
+      - image: ghcr.io/seatsurfing/admin-ui:latest
         name: admin-ui
         imagePullPolicy: Always
         env:
