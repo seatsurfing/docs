@@ -1,0 +1,1066 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../getting-started/">
+      
+      
+        <link rel="next" href="../upgrading/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Kubernetes - Seatsurfing Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kubernetes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Seatsurfing Documentation" class="md-header__button md-logo" aria-label="Seatsurfing Documentation" data-md-component="logo">
+      
+  <img src="../img/seatsurfing_white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Seatsurfing Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kubernetes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Seatsurfing Documentation" class="md-nav__button md-logo" aria-label="Seatsurfing Documentation" data-md-component="logo">
+      
+  <img src="../img/seatsurfing_white.svg" alt="logo">
+
+    </a>
+    Seatsurfing Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker / Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-system-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. System Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-database-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Create database secret
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-create-database-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Create database deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-create-seatsurfing-deployment-and-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Create Seatsurfing deployment and ingress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-initial-configration" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Initial configration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-use-the-web-app-to-book-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Use the web app to book spaces
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Administration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Administration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Administration UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Auth Providers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Auth Providers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth-provider/azure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Azure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth-provider/google/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google Cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth-provider/keycloak/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keycloak
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../booking-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../confluence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Confluence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rest-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rest API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-system-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. System Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-database-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Create database secret
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-create-database-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Create database deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-create-seatsurfing-deployment-and-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Create Seatsurfing deployment and ingress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-initial-configration" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Initial configration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-use-the-web-app-to-book-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Use the web app to book spaces
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="kubernetes">Kubernetes</h1>
+<h2 id="1-system-requirements">1. System Requirements</h2>
+<p>To set up the Seatsurfing backend on Kubernetes, the following system requirements must be met:</p>
+<ul>
+<li>Linux server(s)</li>
+<li>Kubernetes cluster with at least one worker node (tested with Kubernetes 1.22 and containerd version 1.5.x)</li>
+<li>Persistent storage for Postgres database (tested with Longhorn 1.2.x)</li>
+<li>Recommended: Reverse proxy with TLS termination (tested with nginx in front of Kubernetes' Traefik ingress)</li>
+</ul>
+<h2 id="2-create-database-secret">2. Create database secret</h2>
+<p>Create a secret for your database password using <code>kubectl</code>:</p>
+<pre><code>kubectl create secret generic seatsurfing-db \
+  --from-literal=db-password='DB_PASSWORD'
+</code></pre>
+<p>Make sure to replace <code>DB_PASSWORD</code> with a secure password.</p>
+<h2 id="3-create-database-deployment">3. Create database deployment</h2>
+<p>Next, we'll create the necessary configurations and deployment for the Postgres database. This configuration contains:</p>
+<ul>
+<li>A persistent volume claim which contains the database files (adjust as needed)</li>
+<li>A deployment of Postgres version 16, inluding some adjustments to make sure Postgres runs well on Kubernetes</li>
+<li>A service which exposes TCP port 5432 of our Postgres database server</li>
+<li>A network policy which ensures that only our Seatsurfing backend is able to connect to the Postgres database service</li>
+</ul>
+<p>Create a file <code>seatsurfing-db.yaml</code> with the following contents (modify as needed):</p>
+<pre><code>kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: seatsurfing-db
+spec:
+  storageClassName: longhorn
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1G
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seatsurfing-db
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: seatsurfing-db
+  template:
+    metadata:
+      labels:
+        app: seatsurfing-db
+    spec:
+      securityContext:
+        fsGroup: 999
+      volumes:
+      - name: db
+        persistentVolumeClaim:
+          claimName: seatsurfing-db
+      initContainers:
+      - image: alpine:latest
+        name: init
+        command: [&quot;sh&quot;, &quot;-c&quot;, &quot;chown 999:999 /var/lib/postgresql/data&quot;]
+        volumeMounts:
+        - mountPath: &quot;/var/lib/postgresql/data&quot;
+          name: db
+          readOnly: false
+          subPath: postgres
+      containers:
+      - image: postgres:16
+        name: db
+        imagePullPolicy: Always
+        ports:
+        - name: port-postgres
+          containerPort: 5432
+        env:
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: seatsurfing-db
+              key: db-password
+        - name: POSTGRES_USER
+          value: &quot;seatsurfing&quot;
+        - name: POSTGRES_DB
+          value: &quot;seatsurfing&quot;
+        volumeMounts:
+        - mountPath: &quot;/var/lib/postgresql/data&quot;
+          name: db
+          readOnly: false
+          subPath: postgres
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seatsurfing-db
+spec:
+  ports:
+    - port: 5432
+      protocol: TCP
+      targetPort: 5432
+  selector:
+    app: seatsurfing-db
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: seatsurfing-db
+spec:
+  podSelector:
+    matchLabels:
+      app: seatsurfing-db
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: seatsurfing-backend
+</code></pre>
+<p>Apply the file:</p>
+<pre><code>kubectl apply -f seatsurfing-db.yaml
+</code></pre>
+<h2 id="4-create-seatsurfing-deployment-and-ingress">4. Create Seatsurfing deployment and ingress</h2>
+<p>Now we're ready to create the configurations and the deployment of our actual Seatsurfing containers (backend, admin-ui, booking-ui). This includes:</p>
+<ul>
+<li>A deployment of the Seatsurfing REST API backend, which connects to the previously deployed Postgres database server</li>
+<li>A deployment of the Seatsurfing Admin Web Interface (admin-ui), which is not directly accessible, but incoming requests are forwarded to it via the backend</li>
+<li>A deployment of the Seatsurfing Booking Web Interface (booking-ui), which is not directly accessible, but incoming requests are forwarded to it via the backend</li>
+<li>A service which exposes port 80 of the Seatsurfing backend</li>
+<li>An ingress which makes the Seatsurfing backend available at host <code>seatsurfing.your-domain.com</code> (you'll need to change that) using Traefik</li>
+</ul>
+<p>Please note: We're making the backend available insecurely via HTTP here. This example assumes you're having a reverse proxy performing TLS termination in front of your Kubernetes cluster. If this is not the case, you should really consider changing port 80 to 443 and add HTTPS encryption to the example.</p>
+<p>Create a file <code>seatsurfing-backend.yaml</code> with the following contents (modify as needed):</p>
+<pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seatsurfing-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seatsurfing-backend
+  template:
+    metadata:
+      labels:
+        app: seatsurfing-backend
+    spec:
+      containers:
+      - image: ghcr.io/seatsurfing/backend:latest
+        name: server
+        imagePullPolicy: Always
+        ports:
+        - name: port-http
+          containerPort: 8080
+        env:
+        - name: POSTGRES_PASS
+          valueFrom:
+            secretKeyRef:
+              name: seatsurfing-db
+              key: db-password
+        - name: POSTGRES_URL
+          value: &quot;postgres://seatsurfing:$(POSTGRES_PASS)@seatsurfing-db/seatsurfing?sslmode=disable&quot;
+        - name: JWT_SIGNING_KEY
+          value: &quot;a_random_key&quot;
+        - name: PUBLIC_URL
+          value: &quot;https://seatsurfing.your-domain.com&quot; 
+        - name: FRONTEND_URL
+          value: &quot;https://seatsurfing.your-domain.com&quot;
+      - image: ghcr.io/seatsurfing/booking-ui:latest
+        name: booking-ui
+        imagePullPolicy: Always
+        env:
+        - name: FRONTEND_URL
+          value: &quot;https://seatsurfing.your-domain.com&quot;
+      - image: ghcr.io/seatsurfing/admin-ui:latest
+        name: admin-ui
+        imagePullPolicy: Always
+        env:
+        - name: FRONTEND_URL
+          value: &quot;https://seatsurfing.your-domain.com&quot;
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seatsurfing-backend
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: seatsurfing-backend
+  type: ClusterIP
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: seatsurfing-backend
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`seatsurfing.your-domain.com`)
+    kind: Rule
+    services:
+    - name: seatsurfing-backend
+      port: 80
+</code></pre>
+<p>Apply the file:</p>
+<pre><code>kubectl apply -f seatsurfing-backend.yaml
+</code></pre>
+<p>Make sure <code>seatsurfing-db</code> and <code>seatsurfing-backend</code>and "Running":</p>
+<pre><code>kubectl get pods | grep seatsurfing
+</code></pre>
+<p>Afterwards, Seatsurfing can be accessed at the specified host (i.e. https://seatsurfing.your-domain.com).</p>
+<h2 id="5-initial-configration">5. Initial configration</h2>
+<p>Access the administrator web-interface using a modern web browser (i.e. Chrome, Firefox, Safari) at: /admin/</p>
+<p>By default, an organisation with one administrator account is created on backend startup if no organisation already exists in the specified database. If not defined otherwise, use <code>admin@seatsurfing.local</code> as the username and <code>12345678</code> as the password.</p>
+<p>The administrator interface can be used to manage room plans, users and settings. Read more about it in the <a href="../admin-ui/">Administration</a> section.</p>
+<h2 id="6-use-the-web-app-to-book-spaces">6. Use the web app to book spaces</h2>
+<p>Let your coworkers use the progressive web app (PWA) to book spaces using their mobile devices or desktop computers:</p>
+<p><a href="http://localhost:8080/ui/">http://localhost:8080/ui/</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
